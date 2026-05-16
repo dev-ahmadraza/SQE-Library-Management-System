@@ -1,5 +1,5 @@
 from library import *
-
+# Main menu for Library Management System
 while True:
     print("\n===== Library Management System =====")
     print("1. Add Book")
