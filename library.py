@@ -129,3 +129,52 @@ def return_book():
             return
 
     print("Book not found")
+
+    def add_book_data(book_id, title, author):
+
+    if not book_id or not title or not author:
+        return False
+
+    for book in books:
+
+        if book["id"] == book_id:
+            return False
+
+    book = {
+        "id": book_id,
+        "title": title,
+        "author": author,
+        "issued": False
+    }
+
+    books.append(book)
+    save_books()
+
+    return True
+
+
+def search_book_by_id(book_id):
+
+    for book in books:
+
+        if book["id"] == book_id:
+            return book
+
+    return None
+
+
+def issue_book_by_id(book_id):
+
+    for book in books:
+
+        if book["id"] == book_id:
+
+            if book["issued"]:
+                return False
+
+            book["issued"] = True
+            save_books()
+
+            return True
+
+    return False
