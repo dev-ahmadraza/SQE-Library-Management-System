@@ -130,10 +130,10 @@ def return_book():
 
     print("Book not found")
 
-    def add_book_data(book_id, title, author):
+def add_book_data(book_id, title, author):
 
-        if not book_id or not title or not author:
-            return False
+    if not book_id or not title or not author:
+        return False
 
     for book in books:
 
