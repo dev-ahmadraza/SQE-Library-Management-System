@@ -16,7 +16,7 @@ def add_book():
 
     print("Book added successfully!")
 
-
+# Function to display all books
 def view_books():
     if len(books) == 0:
         print("No books available")
