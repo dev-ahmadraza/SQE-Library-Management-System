@@ -1,4 +1,5 @@
 from library import *
+load_books()
 # Main menu for Library Management System
 while True:
     print("\n===== Library Management System =====")
